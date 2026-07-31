@@ -806,3 +806,14 @@ transform:scale(1);
 }
 
 }
+/* ===========================
+   Mobile View - Hide Navigation
+=========================== */
+
+@media screen and (max-width:768px){
+
+nav{
+    display:none !important;
+}
+
+}
