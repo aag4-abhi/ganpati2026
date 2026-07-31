@@ -726,95 +726,69 @@ font-size:34px;
 
 .coming{
     width:100%;
-    height:320px;
-    border-radius:20px;
+    height:260px;
+    border-radius:18px;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
+    padding:15px;
     box-sizing:border-box;
-
     background:linear-gradient(135deg,#fff8e8,#ffe8b3,#ffd27a);
-    border:4px solid #f4b400;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    border:3px solid #f4b400;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
     transition:.4s;
 }
 
 .coming:hover{
-    transform:translateY(-8px) scale(1.03);
+    transform:translateY(-5px);
 }
 
 .coming-circle{
-
-    width:90px;
-    height:90px;
-
+    width:65px;
+    height:65px;
     border-radius:50%;
-
     background:linear-gradient(#ff9800,#ff5722);
-
     color:#fff;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
-    font-size:52px;
+    font-size:34px;
     font-weight:bold;
-
-    margin-bottom:20px;
-
-    box-shadow:0 8px 20px rgba(255,87,34,.4);
-
+    margin-bottom:12px;
+    box-shadow:0 5px 12px rgba(255,87,34,.35);
 }
 
 .coming h2{
-
     color:#c0392b;
-    font-size:28px;
-    margin:8px 0;
-
+    font-size:20px;
+    margin:6px 0;
+    line-height:1.4;
 }
 
 .coming h3{
-
     color:#8e4400;
-    font-size:22px;
-    margin:8px 0;
-
+    font-size:18px;
+    margin:6px 0;
 }
 
 .coming p{
-
     color:#555;
-    font-size:17px;
-    margin-top:10px;
-
+    font-size:15px;
+    margin-top:6px;
 }
 
 .coming-tag{
-
-    margin-top:20px;
-
+    margin-top:12px;
     background:#d35400;
-
     color:#fff;
-
-    padding:10px 22px;
-
-    border-radius:40px;
-
-    font-size:14px;
-
+    padding:6px 14px;
+    border-radius:25px;
+    font-size:11px;
     font-weight:bold;
-
-    letter-spacing:2px;
-
+    letter-spacing:1px;
     animation:pulse 1.8s infinite;
-
 }
 
 @keyframes pulse{
@@ -824,7 +798,7 @@ transform:scale(1);
 }
 
 50%{
-transform:scale(1.08);
+transform:scale(1.05);
 }
 
 100%{
