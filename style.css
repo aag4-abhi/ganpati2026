@@ -816,3 +816,62 @@ nav{
 }
 
 }
+/* ===========================
+   BUTTON SHINE EFFECT
+=========================== */
+
+.btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.8),
+        transparent
+    );
+    animation:shine 2.5s infinite;
+}
+
+@keyframes shine{
+
+0%{
+left:-120%;
+}
+
+100%{
+left:150%;
+}
+
+}
+
+.btn{
+    animation:pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow{
+
+0%{
+transform:scale(1);
+box-shadow:0 0 12px rgba(255,140,0,.4);
+}
+
+50%{
+transform:scale(1.05);
+box-shadow:0 0 30px rgba(255,140,0,.9);
+}
+
+100%{
+transform:scale(1);
+box-shadow:0 0 12px rgba(255,140,0,.4);
+}
+
+}
