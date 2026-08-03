@@ -219,8 +219,16 @@ transform:translateY(-8px);
 }
 
 .card h3{
-color:#ff6b00;
-margin-bottom:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#ff6b00;
+    font-size:30px;
+    font-weight:700;
+
+    margin-bottom:15px;
+    text-align:center;
 }
 
 /* ===========================
