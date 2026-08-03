@@ -726,72 +726,60 @@ font-size:34px;
 
 .coming{
     width:100%;
-    height:260px;
-    border-radius:18px;
+    height:350px;
+    border-radius:20px;
+    background:linear-gradient(135deg,#fff8e8,#ffe9b5,#ffd57a);
+    border:3px solid #f4b400;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:15px;
+    padding:20px;
     box-sizing:border-box;
-    background:linear-gradient(135deg,#fff8e8,#ffe8b3,#ffd27a);
-    border:3px solid #f4b400;
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
     transition:.4s;
 }
 
 .coming:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
 }
 
 .coming-circle{
-    width:65px;
-    height:65px;
+    width:75px;
+    height:75px;
     border-radius:50%;
     background:linear-gradient(#ff9800,#ff5722);
     color:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:34px;
+    font-size:42px;
     font-weight:bold;
-    margin-bottom:12px;
-    box-shadow:0 5px 12px rgba(255,87,34,.35);
+    margin-bottom:18px;
 }
 
 .coming h2{
     color:#c0392b;
-    font-size:20px;
-    margin:6px 0;
-    line-height:1.4;
+    font-size:24px;
+    line-height:1.5;
+    margin-bottom:18px;
 }
 
-.coming h3{
-    color:#8e4400;
-    font-size:18px;
-    margin:6px 0;
+.coming-year{
+    background:#fff;
+    padding:12px 18px;
+    border-radius:12px;
+    font-size:22px;
+    font-weight:bold;
+    color:#b85a00;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
 }
 
 .coming p{
+    margin-top:18px;
+    font-size:16px;
     color:#555;
-    font-size:15px;
-    margin-top:6px;
 }
-
-.coming-tag{
-    margin-top:12px;
-    background:#d35400;
-    color:#fff;
-    padding:6px 14px;
-    border-radius:25px;
-    font-size:11px;
-    font-weight:bold;
-    letter-spacing:1px;
-    animation:pulse 1.8s infinite;
-}
-
-@keyframes pulse{
 
 0%{
 transform:scale(1);
