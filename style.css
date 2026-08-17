@@ -878,3 +878,21 @@ box-shadow:0 0 12px rgba(255,140,0,.4);
 #gallery{
     padding-top:30px !important;
 }
+/* ===========================
+   GALLERY TOP SPACE FIX
+=========================== */
+
+#gallery{
+    padding-top:0 !important;
+    margin-top:0 !important;
+}
+
+#gallery .container{
+    padding-top:0 !important;
+    margin-top:0 !important;
+}
+
+#gallery h2{
+    margin-top:0 !important;
+    padding-top:0 !important;
+}
