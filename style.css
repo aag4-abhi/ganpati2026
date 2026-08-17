@@ -875,3 +875,7 @@ box-shadow:0 0 12px rgba(255,140,0,.4);
 }
 
 }
+/* Gallery वरचा extra space कमी करण्यासाठी */
+#gallery{
+    padding-top:20px !important;
+}
