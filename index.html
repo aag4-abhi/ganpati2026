@@ -20,7 +20,47 @@
 </head>
 
 <body>
+<!-- =========================
+     GANPATI ENTRY SCREEN
+========================= -->
 
+<div id="ganpatiEntry">
+
+    <div class="entry-content">
+
+        <div class="entry-mantra">
+            ॥ श्री गणेशाय नमः ॥
+        </div>
+
+        <h1>गायकवाड कुटुंब</h1>
+
+        <h2>गणपती उत्सव २०२६</h2>
+
+        <div class="door-handle">🪔</div>
+
+        <p>बाप्पाच्या दर्शनासाठी</p>
+
+        <button id="openDoorBtn">
+            🙏 दार उघडा 🙏
+        </button>
+
+    </div>
+
+    <div class="ganpati-door door-left"></div>
+
+    <div class="ganpati-door door-right"></div>
+
+    <div class="bappa-reveal">
+
+        <img src="images/2024.jpg" alt="गणपती बाप्पा">
+
+        <div class="bappa-text">
+            🌺 गणपती बाप्पा मोरया 🌺
+        </div>
+
+    </div>
+
+</div>
 <!-- ===================== -->
 <!-- LOADING SCREEN -->
 <!-- ===================== -->
@@ -632,5 +672,28 @@ document.getElementById("seconds").innerHTML=seconds;
 </script>
 
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
 
+    const entry = document.getElementById("ganpatiEntry");
+    const openBtn = document.getElementById("openDoorBtn");
+
+    document.body.style.overflow = "hidden";
+
+    openBtn.addEventListener("click", function(){
+
+        entry.classList.add("open");
+
+        setTimeout(function(){
+
+            entry.classList.add("hide");
+
+            document.body.style.overflow = "";
+
+        }, 1800);
+
+    });
+
+});
+</script>
 </html>
