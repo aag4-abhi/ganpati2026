@@ -896,3 +896,372 @@ box-shadow:0 0 12px rgba(255,140,0,.4);
     margin-top:0 !important;
     padding-top:0 !important;
 }
+/* =====================================
+   GANPATI ENTRY - TEMPLE DOOR
+===================================== */
+
+#ganpatiEntry{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100vh;
+    z-index:99999;
+    overflow:hidden;
+    background:#2b160c;
+}
+
+/* =========================
+   BAPPA BEHIND THE DOOR
+========================= */
+
+.bappa-reveal{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,180,50,.35),
+            rgba(40,15,5,.95)
+        );
+
+    z-index:1;
+}
+
+.bappa-reveal img{
+    width:min(380px,70vw);
+    height:min(480px,65vh);
+
+    object-fit:cover;
+    object-position:center;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 0 30px rgba(255,180,40,.8),
+        0 0 80px rgba(255,120,0,.5);
+}
+
+.bappa-text{
+    margin-top:20px;
+
+    color:#ffd76a;
+
+    font-size:28px;
+    font-weight:bold;
+
+    text-shadow:
+        0 0 10px #ff8c00,
+        0 0 25px #ff8c00;
+}
+
+
+/* =========================
+   TEMPLE DOORS
+========================= */
+
+.ganpati-door{
+    position:absolute;
+
+    top:0;
+
+    width:50%;
+    height:100%;
+
+    z-index:5;
+
+    background:
+        linear-gradient(
+            90deg,
+            #3b1b0b,
+            #6b3212,
+            #3b1b0b
+        );
+
+    border:8px solid #9b5b20;
+
+    box-shadow:
+        inset 0 0 40px rgba(0,0,0,.8),
+        0 0 30px rgba(0,0,0,.6);
+
+    transition:
+        transform 1.8s cubic-bezier(.77,0,.18,1);
+}
+
+
+/* LEFT DOOR */
+
+.door-left{
+    left:0;
+    border-right:4px solid #c88932;
+    transform-origin:left center;
+}
+
+
+/* RIGHT DOOR */
+
+.door-right{
+    right:0;
+    border-left:4px solid #c88932;
+    transform-origin:right center;
+}
+
+
+/* Decorative border */
+
+.door-left::before,
+.door-right::before{
+    content:"";
+
+    position:absolute;
+
+    top:15%;
+    left:12%;
+    right:12%;
+    bottom:15%;
+
+    border:4px solid rgba(220,160,70,.7);
+
+    border-radius:12px;
+
+    box-shadow:
+        inset 0 0 20px rgba(0,0,0,.6);
+}
+
+
+/* OM SYMBOL */
+
+.door-left::after,
+.door-right::after{
+    content:"॥ ॐ ॥";
+
+    position:absolute;
+
+    top:40%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    color:#ffd76a;
+
+    font-size:40px;
+    font-weight:bold;
+
+    text-shadow:
+        0 0 10px #ff9800;
+}
+
+
+/* =========================
+   ENTRY CONTENT
+========================= */
+
+.entry-content{
+    position:absolute;
+
+    z-index:10;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    color:#fff;
+
+    width:90%;
+
+    transition:.6s;
+}
+
+
+.entry-mantra{
+    font-size:22px;
+
+    color:#ffd76a;
+
+    margin-bottom:15px;
+}
+
+
+.entry-content h1{
+    font-size:38px;
+
+    margin:8px 0;
+
+    color:#fff;
+
+    text-shadow:
+        0 0 10px #ff9800,
+        0 0 25px #ff9800;
+}
+
+
+.entry-content h2{
+    font-size:28px;
+
+    margin:8px 0 20px;
+
+    color:#ffd76a;
+}
+
+
+.entry-content p{
+    font-size:18px;
+
+    margin-bottom:15px;
+}
+
+
+.door-handle{
+    font-size:45px;
+    margin:10px;
+}
+
+
+/* =========================
+   OPEN BUTTON
+========================= */
+
+#openDoorBtn{
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9800,
+            #ff5722
+        );
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 0 15px rgba(255,152,0,.7);
+
+    animation:doorButtonPulse 1.8s infinite;
+
+    transition:.3s;
+}
+
+
+#openDoorBtn:hover{
+    transform:scale(1.08);
+
+    box-shadow:
+        0 0 35px rgba(255,180,40,1);
+}
+
+
+/* =========================
+   DOOR OPEN ANIMATION
+========================= */
+
+#ganpatiEntry.open .door-left{
+    transform:
+        perspective(1000px)
+        rotateY(-105deg);
+}
+
+#ganpatiEntry.open .door-right{
+    transform:
+        perspective(1000px)
+        rotateY(105deg);
+}
+
+#ganpatiEntry.open .entry-content{
+    opacity:0;
+
+    transform:
+        translate(-50%,-50%)
+        scale(.8);
+}
+
+
+/* =========================
+   HIDE ENTRY SCREEN
+========================= */
+
+#ganpatiEntry.hide{
+    opacity:0;
+    visibility:hidden;
+
+    transition:
+        opacity .8s ease,
+        visibility .8s;
+}
+
+
+/* =========================
+   BUTTON PULSE
+========================= */
+
+@keyframes doorButtonPulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.06);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+
+/* =========================
+   MOBILE VIEW
+========================= */
+
+@media screen and (max-width:768px){
+
+    .entry-mantra{
+        font-size:18px;
+    }
+
+    .entry-content h1{
+        font-size:28px;
+    }
+
+    .entry-content h2{
+        font-size:22px;
+    }
+
+    .entry-content p{
+        font-size:16px;
+    }
+
+    #openDoorBtn{
+        font-size:16px;
+        padding:13px 24px;
+    }
+
+    .bappa-reveal img{
+        width:75vw;
+        height:55vh;
+    }
+
+    .bappa-text{
+        font-size:22px;
+    }
+
+}
