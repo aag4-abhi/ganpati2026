@@ -1429,3 +1429,36 @@ box-shadow:0 0 12px rgba(255,140,0,.4);
 #ganpatiEntry.open{
     background:transparent !important;
 }
+/* =====================================
+   MOBILE DOOR - PERFECT FIT
+===================================== */
+
+@media screen and (max-width: 768px){
+
+    #ganpatiEntry{
+        width:100vw;
+        height:100dvh;
+        overflow:hidden;
+    }
+
+    .ganpati-door{
+        top:0;
+        height:100dvh;
+        width:50%;
+        
+        /* IMAGE STRETCH होऊ नये */
+        background-size:auto 100%;
+        background-repeat:no-repeat;
+    }
+
+    .door-left{
+        left:0;
+        background-position:left center;
+    }
+
+    .door-right{
+        right:0;
+        background-position:right center;
+    }
+
+}
