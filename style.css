@@ -1354,4 +1354,25 @@ box-shadow:0 0 12px rgba(255,140,0,.4);
     }
 
 }
+/* =====================================
+   REMOVE OLD DOOR OVERLAY CONTENT
+===================================== */
 
+/* Side square boxes remove */
+#ganpatiEntry .door-left::before,
+#ganpatiEntry .door-left::after,
+#ganpatiEntry .door-right::before,
+#ganpatiEntry .door-right::after{
+    content:none !important;
+    display:none !important;
+}
+
+/* Old entry text remove */
+#ganpatiEntry .entry-content{
+    display:none !important;
+}
+
+/* Bappa reveal photo keep visible */
+#ganpatiEntry .bappa-reveal{
+    display:flex !important;
+}
