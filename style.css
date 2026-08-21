@@ -1420,3 +1420,12 @@ box-shadow:0 0 12px rgba(255,140,0,.4);
 #ganpatiEntry .ganpati-door{
     border:0 !important;
 }
+/* Remove brown screen after door opens */
+
+#ganpatiEntry{
+    background:transparent !important;
+}
+
+#ganpatiEntry.open{
+    background:transparent !important;
+}
