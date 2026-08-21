@@ -670,32 +670,7 @@ document.getElementById("seconds").innerHTML=seconds;
 },1000);
 
 </script>
-<script>
 
-document.addEventListener("DOMContentLoaded", function(){
-
-    const entry = document.getElementById("ganpatiEntry");
-    const openBtn = document.getElementById("openDoorBtn");
-
-    document.body.style.overflow = "hidden";
-
-    openBtn.addEventListener("click", function(){
-
-        entry.classList.add("open");
-
-        setTimeout(function(){
-
-            entry.classList.add("hide");
-
-            document.body.style.overflow = "";
-
-        }, 1800);
-
-    });
-
-});
-
-</script>
 </body>
 
 </html>
