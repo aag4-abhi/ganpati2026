@@ -1376,3 +1376,47 @@ box-shadow:0 0 12px rgba(255,140,0,.4);
 #ganpatiEntry .bappa-reveal{
     display:flex !important;
 }
+/* =====================================
+   FINAL CLEAN DOOR SCREEN
+===================================== */
+
+/* Remove side square borders / boxes */
+#ganpatiEntry .ganpati-door{
+    border:none !important;
+    outline:none !important;
+    box-shadow:none !important;
+}
+
+/* Remove all old text */
+#ganpatiEntry .entry-content,
+#ganpatiEntry .entry-mantra,
+#ganpatiEntry .entry-content h1,
+#ganpatiEntry .entry-content h2,
+#ganpatiEntry .entry-content p,
+#ganpatiEntry .bappa-text{
+    display:none !important;
+}
+
+/* Remove old button */
+#ganpatiEntry #openDoorBtn{
+    display:none !important;
+}
+
+/* Remove any pseudo-element boxes/text */
+#ganpatiEntry .ganpati-door::before,
+#ganpatiEntry .ganpati-door::after{
+    content:none !important;
+    display:none !important;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+/* Keep full door image */
+#ganpatiEntry{
+    border:none !important;
+    outline:none !important;
+}
+
+#ganpatiEntry .ganpati-door{
+    border:0 !important;
+}
