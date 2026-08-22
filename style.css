@@ -1652,3 +1652,56 @@ box-shadow:0 0 12px rgba(255,140,0,.4);
 #ganpatiEntry.open::after{
     display:none;
 }
+/* =================================
+   DOOR CLICK HINT
+================================= */
+
+.door-click-hint{
+    position:absolute;
+    left:50%;
+    top:50%;
+
+    width:110px;
+    height:110px;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,215,120,0.8);
+
+    box-shadow:
+        0 0 15px rgba(255,190,60,0.7),
+        0 0 35px rgba(255,190,60,0.4);
+
+    animation:doorHint 2s ease-in-out infinite;
+
+    pointer-events:none;
+
+    z-index:20;
+}
+
+@keyframes doorHint{
+
+    0%{
+        opacity:0.2;
+        transform:translate(-50%,-50%) scale(0.7);
+    }
+
+    50%{
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1);
+    }
+
+    100%{
+        opacity:0.2;
+        transform:translate(-50%,-50%) scale(1.35);
+    }
+}
+
+/* Door open झाल्यावर hint गायब */
+
+#ganpatiEntry.open .door-click-hint{
+    opacity:0;
+    visibility:hidden;
+}
