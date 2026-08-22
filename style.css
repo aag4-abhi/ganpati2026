@@ -1567,3 +1567,29 @@ box-shadow:0 0 12px rgba(255,140,0,.4);
 #ganpatiEntry{
     cursor:pointer;
 }
+/* =====================================
+   SUBTLE DOOR CLICK HINT
+===================================== */
+
+#ganpatiEntry .door-left,
+#ganpatiEntry .door-right{
+    animation:doorBreath 3s ease-in-out infinite;
+}
+
+@keyframes doorBreath{
+
+    0%,100%{
+        filter:brightness(1);
+    }
+
+    50%{
+        filter:brightness(1.12);
+    }
+
+}
+
+/* Stop effect when door opens */
+#ganpatiEntry.open .door-left,
+#ganpatiEntry.open .door-right{
+    animation:none;
+}
