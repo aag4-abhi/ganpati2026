@@ -1754,3 +1754,11 @@ box-shadow:0 0 12px rgba(255,140,0,.4);
     }
 
 }
+.arrival-title{
+    color: #ffffff !important;
+    text-shadow:
+        0 0 5px #ffd700,
+        0 0 10px #ffd700,
+        0 0 18px #d4af37;
+    font-weight: 700;
+}
