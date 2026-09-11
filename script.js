@@ -8,17 +8,15 @@
    LOADER
 ====================================== */
 
-window.addEventListener("load", () => {
+window.addEventListener("load", function () {
 
-    const loader =
-        document.getElementById("loader");
+    const loader = document.getElementById("loader");
 
     if (loader) {
 
-        setTimeout(() => {
+        setTimeout(function () {
 
             loader.style.opacity = "0";
-
             loader.style.visibility = "hidden";
 
         }, 1200);
@@ -29,30 +27,24 @@ window.addEventListener("load", () => {
 
 
 /* ======================================
-   MUSIC BUTTON
+   MUSIC
 ====================================== */
 
-const music =
-    document.getElementById("bgMusic");
-
-const musicBtn =
-    document.getElementById("musicBtn");
-
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
 
 if (musicBtn && music) {
 
-    musicBtn.addEventListener("click", () => {
+    musicBtn.addEventListener("click", function () {
 
         if (music.paused) {
 
             music.play();
-
             musicBtn.innerHTML = "⏸";
 
         } else {
 
             music.pause();
-
             musicBtn.innerHTML = "🎵";
 
         }
@@ -66,13 +58,11 @@ if (musicBtn && music) {
    BACK TO TOP
 ====================================== */
 
-const topBtn =
-    document.getElementById("topBtn");
-
+const topBtn = document.getElementById("topBtn");
 
 if (topBtn) {
 
-    window.addEventListener("scroll", () => {
+    window.addEventListener("scroll", function () {
 
         if (window.scrollY > 300) {
 
@@ -87,14 +77,11 @@ if (topBtn) {
     });
 
 
-    topBtn.addEventListener("click", () => {
+    topBtn.addEventListener("click", function () {
 
         window.scrollTo({
-
             top: 0,
-
             behavior: "smooth"
-
         });
 
     });
@@ -103,30 +90,88 @@ if (topBtn) {
 
 
 /* ======================================
-   COUNTDOWN
-   13 September 2026
-   11:00 PM
+   TEST COUNTDOWN
+   TEMPORARY
 ====================================== */
 
 const targetDate =
-    new Date("September 11, 2026 15:47:00").getTime();
-
+    new Date("September 11, 2026 16:18:00").getTime();
 
 let countdownFinished = false;
 
 
+/* ======================================
+   COUNTDOWN COMPLETE MESSAGE
+====================================== */
+
+function showBappaArrivalMessage() {
+
+    const countdownSection =
+        document.getElementById("countdown");
+
+    if (!countdownSection) {
+        return;
+    }
+
+    countdownSection.innerHTML = `
+
+        <div class="container bappa-arrived">
+
+            <h2 class="arrival-title">
+                🌺 आता कसली वाट बघताय? मग या बाप्पाच्या दर्शनाला! 🌺
+            </h2>
+
+            <h1 class="arrival-heading">
+                🙏 आपल्या लाडक्या बाप्पाचे मंगलमय आगमन झाले आहे! 🙏
+            </h1>
+
+            <p class="morya-text">
+                ✨ गणपती बाप्पा मोरया! मंगलमूर्ती मोरया! ✨
+            </p>
+
+        </div>
+
+    `;
+
+}
+
+
+/* ======================================
+   SHOW 2026 BAPPA PHOTO IN GALLERY
+====================================== */
+
+function show2026BappaPhoto() {
+
+    const coming2026 =
+        document.getElementById("coming2026");
+
+    if (!coming2026) {
+        return;
+    }
+
+    coming2026.outerHTML = `
+        <img
+            src="images/bappa-2026.jpeg"
+            alt="Ganpati 2026"
+        >
+    `;
+
+}
+
+
+/* ======================================
+   COUNTDOWN FUNCTION
+====================================== */
+
 function countdown() {
 
-    const now =
-        new Date().getTime();
+    const now = new Date().getTime();
 
     const distance =
         targetDate - now;
 
 
-    /* =================================
-       COUNTDOWN FINISHED
-    ================================= */
+    /* COUNTDOWN FINISHED */
 
     if (distance <= 0) {
 
@@ -145,51 +190,29 @@ function countdown() {
     }
 
 
-    /* =================================
-       CALCULATE TIME
-    ================================= */
+    /* TIME CALCULATION */
 
     const days = Math.floor(
-
-        distance /
-        (1000 * 60 * 60 * 24)
-
+        distance / (1000 * 60 * 60 * 24)
     );
-
 
     const hours = Math.floor(
-
-        (distance %
-        (1000 * 60 * 60 * 24)) /
-
+        (distance % (1000 * 60 * 60 * 24)) /
         (1000 * 60 * 60)
-
     );
-
 
     const minutes = Math.floor(
-
-        (distance %
-        (1000 * 60 * 60)) /
-
+        (distance % (1000 * 60 * 60)) /
         (1000 * 60)
-
     );
-
 
     const seconds = Math.floor(
-
-        (distance %
-        (1000 * 60)) /
-
+        (distance % (1000 * 60)) /
         1000
-
     );
 
 
-    /* =================================
-       DISPLAY TIME
-    ================================= */
+    /* ELEMENTS */
 
     const daysElement =
         document.getElementById("days");
@@ -204,112 +227,35 @@ function countdown() {
         document.getElementById("seconds");
 
 
+    /* DISPLAY */
+
     if (daysElement) {
 
-        daysElement.innerHTML =
+        daysElement.textContent =
             String(days).padStart(2, "0");
 
     }
 
-
     if (hoursElement) {
 
-        hoursElement.innerHTML =
+        hoursElement.textContent =
             String(hours).padStart(2, "0");
 
     }
 
-
     if (minutesElement) {
 
-        minutesElement.innerHTML =
+        minutesElement.textContent =
             String(minutes).padStart(2, "0");
 
     }
 
-
     if (secondsElement) {
 
-        secondsElement.innerHTML =
+        secondsElement.textContent =
             String(seconds).padStart(2, "0");
 
     }
-
-}
-
-
-/* ======================================
-   COUNTDOWN COMPLETE MESSAGE
-====================================== */
-
-function showBappaArrivalMessage() {
-
-    const countdownSection =
-        document.getElementById("countdown");
-
-
-    if (!countdownSection) {
-        return;
-    }
-
-
-    countdownSection.innerHTML = `
-
-        <div class="container bappa-arrived">
-
-            <h2 class="arrival-title">
-
-                🌺 आता कसली वाट बघताय?
-                मग या बाप्पाच्या दर्शनाला! 🌺
-
-            </h2>
-
-
-            <h1 class="arrival-heading">
-
-                🙏 आपल्या लाडक्या बाप्पाचे
-                मंगलमय आगमन झाले आहे! 🙏
-
-            </h1>
-
-
-            <p class="morya-text">
-
-                ✨ गणपती बाप्पा मोरया!
-                मंगलमूर्ती मोरया! ✨
-
-            </p>
-
-        </div>
-
-    `;
-
-}
-
-
-/* ======================================
-   2026 GALLERY PHOTO
-====================================== */
-
-function show2026BappaPhoto() {
-
-    const coming2026 =
-        document.getElementById("coming2026");
-
-
-    if (!coming2026) {
-        return;
-    }
-
-
-    coming2026.outerHTML = `
-
-        <img
-            src="bappa-2026.jpeg"
-            alt="Ganpati 2026"
-        >
-
-    `;
 
 }
 
@@ -320,14 +266,25 @@ function show2026BappaPhoto() {
 
 countdown();
 
+setInterval(countdown, 1000);
 
-setInterval(
 
-    countdown,
+/* ======================================
+   GALLERY IMAGE CLICK
+====================================== */
 
-    1000
+document.addEventListener("click", function (event) {
 
-);
+    if (event.target.matches(".photo img")) {
+
+        window.open(
+            event.target.src,
+            "_blank"
+        );
+
+    }
+
+});
 
 
 /* ======================================
@@ -337,130 +294,54 @@ setInterval(
 const sections =
     document.querySelectorAll("section");
 
+if ("IntersectionObserver" in window) {
 
-const observer =
-    new IntersectionObserver(
+    const observer =
+        new IntersectionObserver(
 
-        entries => {
+            function (entries) {
 
-            entries.forEach(entry => {
+                entries.forEach(function (entry) {
 
-                if (entry.isIntersecting) {
+                    if (entry.isIntersecting) {
 
-                    entry.target.style.opacity = "1";
+                        entry.target.style.opacity = "1";
 
-                    entry.target.style.transform =
-                        "translateY(0px)";
+                        entry.target.style.transform =
+                            "translateY(0px)";
 
-                }
+                    }
 
-            });
+                });
 
-        },
+            },
 
-        {
+            {
+                threshold: 0.20
+            }
 
-            threshold: 0.20
-
-        }
-
-    );
-
-
-sections.forEach(section => {
-
-    section.style.opacity = "0";
-
-    section.style.transform =
-        "translateY(60px)";
-
-    section.style.transition =
-        "1s";
-
-    observer.observe(section);
-
-});
+        );
 
 
-/* ======================================
-   GALLERY ZOOM
-====================================== */
+    sections.forEach(function (section) {
 
-document.addEventListener(
-    "click",
-    function(event) {
+        section.style.opacity = "0";
 
-        if (
-            event.target.matches(
-                ".photo img"
-            )
-        ) {
+        section.style.transform =
+            "translateY(60px)";
 
-            window.open(
-                event.target.src,
-                "_blank"
-            );
+        section.style.transition =
+            "1s";
 
-        }
-
-    }
-);
-
-
-/* ======================================
-   NAVBAR ACTIVE LINK
-====================================== */
-
-const navLinks =
-    document.querySelectorAll("nav a");
-
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-
-    sections.forEach(section => {
-
-        const sectionTop =
-            section.offsetTop - 120;
-
-
-        if (
-            window.scrollY >= sectionTop
-        ) {
-
-            current =
-                section.getAttribute("id");
-
-        }
+        observer.observe(section);
 
     });
 
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-
-        if (
-            link.getAttribute("href") ===
-            "#" + current
-        ) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
+}
 
 
 /* ======================================
-   CONSOLE MESSAGE
+   CONSOLE
 ====================================== */
 
 console.log("🌺 Ganpati Bappa Morya 🌺");
-
-console.log("Website Developed for Gaikwad Family");
