@@ -117,13 +117,13 @@ function showBappaArrivalMessage() {
 
         <div class="container bappa-arrived">
 
-            <h2 class="arrival-title">
-                🌺 आता कसली वाट बघताय? मग या बाप्पाच्या दर्शनाला! 🌺
-            </h2>
-
-            <h1 class="arrival-heading">
+            <h1 class="arrival-title">
                 🙏 आपल्या लाडक्या बाप्पाचे मंगलमय आगमन झाले आहे! 🙏
             </h1>
+
+            <h2 class="arrival-heading">
+              🌺 आता कसली वाट बघताय ? या मग आपल्या लाडक्या बाप्पाच्या दर्शनाला! 🌺  
+            </h2>
 
             <p class="morya-text">
                 ✨ गणपती बाप्पा मोरया! मंगलमूर्ती मोरया! ✨
