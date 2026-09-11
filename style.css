@@ -1705,3 +1705,52 @@ box-shadow:0 0 12px rgba(255,140,0,.4);
     opacity:0;
     visibility:hidden;
 }
+/* =================================
+   COUNTDOWN COMPLETE MESSAGE
+================================= */
+
+.bappa-arrived{
+    text-align:center;
+    padding:35px 20px;
+}
+
+.arrival-title{
+    margin-bottom:18px;
+    line-height:1.5;
+}
+
+.arrival-heading{
+    margin:15px auto;
+    line-height:1.5;
+}
+
+.morya-text{
+    margin-top:18px;
+    font-size:21px;
+    font-weight:600;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media screen and (max-width:768px){
+
+    .bappa-arrived{
+        padding:28px 15px;
+    }
+
+    .arrival-title{
+        font-size:24px;
+    }
+
+    .arrival-heading{
+        font-size:24px;
+    }
+
+    .morya-text{
+        font-size:17px;
+    }
+
+}
