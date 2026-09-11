@@ -305,7 +305,7 @@ function show2026BappaPhoto() {
     coming2026.outerHTML = `
 
         <img
-            src="images/bappa-2026.jpg"
+            src="bappa-2026.jpeg"
             alt="Ganpati 2026"
         >
 
