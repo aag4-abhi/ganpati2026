@@ -109,7 +109,7 @@ if (topBtn) {
 ====================================== */
 
 const targetDate =
-    new Date("September 13, 2026 23:00:00").getTime();
+    new Date("September 11, 2026 15:35:00").getTime();
 
 
 let countdownFinished = false;
